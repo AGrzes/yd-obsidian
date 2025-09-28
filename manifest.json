@@ -1,11 +1,10 @@
 {
-	"id": "yd-plugin",
-	"name": "YD Plugin",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Yd Plugin.",
-	"author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
-	"authorUrl": "https://github.com/AGrzes",
-	"isDesktopOnly": true,
-  "main": "target/index.js"
+  "id": "yd-plugin",
+  "name": "YD Plugin",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Yd Plugin.",
+  "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
+  "authorUrl": "https://github.com/AGrzes",
+  "isDesktopOnly": true
 }

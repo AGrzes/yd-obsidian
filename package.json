@@ -1,0 +1,30 @@
+{
+  "name": "yd-obsidian",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "keywords": [],
+  "author": "Grzegorz Abramczyk <abramczykg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "@typescript-eslint/eslint-plugin": "8.44.1",
+    "@typescript-eslint/parser": "8.44.1",
+    "builtin-modules": "5.0.0",
+    "esbuild": "0.25.10",
+    "obsidian": "latest",
+    "typescript": "5.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AGrzes/yd-obsidian.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/AGrzes/yd-obsidian/issues"
+  },
+  "homepage": "https://github.com/AGrzes/yd-obsidian"
+}

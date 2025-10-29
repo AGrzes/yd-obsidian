@@ -1,4 +1,4 @@
-import { ItemView, Plugin, WorkspaceLeaf } from 'obsidian'
+import { IconName, ItemView, Plugin, WorkspaceLeaf } from 'obsidian'
 import { Root, createRoot } from 'react-dom/client'
 const VIEW_TYPE = 'field-view'
 const FIELD_NAME = 'state'
@@ -26,8 +26,12 @@ export class FieldView extends ItemView {
     return 'Frontmatter Field View'
   }
 
+  getIcon(): IconName {
+    return 'layers'
+  }
+
   async onOpen() {
-    this.reactRootEl = this.containerEl.createDiv({ cls: 'field-view' })
+    //this.reactRootEl = this.containerEl.createDiv({ cls: 'field-view' })
     this.root = createRoot(this.contentEl)
     this.renderReact()
 

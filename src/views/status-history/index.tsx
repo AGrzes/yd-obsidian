@@ -66,6 +66,10 @@ export function onload(plugin: Plugin) {
       }
     },
   })
+
+  plugin.addRibbonIcon('layers', 'Toggle Field View', async () => {
+    const leaves = plugin.app.commands.executeCommandById(`${plugin.manifest.id}:toggle-field-view`)
+  })
 }
 
 export function onunload(plugin: Plugin) {

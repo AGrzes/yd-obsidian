@@ -4,6 +4,15 @@ import { StateDisplay } from './state-display.js'
 const VIEW_TYPE = 'field-view'
 const FIELD_NAME = 'stateHistory'
 
+declare module 'obsidian' {
+  interface App {
+    commands: {
+      commands: { [commandId: string]: { id: string; name: string; callback: () => void } }
+      executeCommandById(commandId: string): boolean
+    }
+  }
+}
+
 export class FieldView extends ItemView {
   reactRootEl: HTMLElement
   root: Root

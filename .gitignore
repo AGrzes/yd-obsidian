@@ -3,3 +3,5 @@ target
 types
 coverage
 /main.js
+*storybook.log
+storybook-static

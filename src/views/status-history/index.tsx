@@ -1,15 +1,9 @@
 import { IconName, ItemView, Plugin, WorkspaceLeaf } from 'obsidian'
 import { Root, createRoot } from 'react-dom/client'
+import { FieldDisplay } from './field-display.js'
 const VIEW_TYPE = 'field-view'
 const FIELD_NAME = 'state'
 
-export function FieldDisplay({ value }: { value: any }) {
-  return (
-    <div className="p-2 text-lg">
-      <strong>Field:</strong> {String(value)}
-    </div>
-  )
-}
 
 export class FieldView extends ItemView {
   reactRootEl: HTMLElement

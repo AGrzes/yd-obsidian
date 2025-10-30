@@ -1,9 +1,8 @@
 import { IconName, ItemView, Plugin, WorkspaceLeaf } from 'obsidian'
 import { Root, createRoot } from 'react-dom/client'
-import { FieldDisplay } from './field-display.js'
+import { StateDisplay } from './state-display.js'
 const VIEW_TYPE = 'field-view'
-const FIELD_NAME = 'state'
-
+const FIELD_NAME = 'stateHistory'
 
 export class FieldView extends ItemView {
   reactRootEl: HTMLElement
@@ -39,14 +38,14 @@ export class FieldView extends ItemView {
 
   renderReact() {
     const file = this.app.workspace.getActiveFile()
-    let value = '(no file)'
+    let value = []
 
     if (file) {
       const meta = this.app.metadataCache.getFileCache(file)
       value = meta?.frontmatter?.[FIELD_NAME] ?? '(missing)'
     }
 
-    this.root.render(<FieldDisplay value={value} />)
+    this.root.render(<StateDisplay value={value} />)
   }
 }
 
